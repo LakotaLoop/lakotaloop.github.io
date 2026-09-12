@@ -90,8 +90,8 @@
       type="application/manifest+json"
       href="/manifest.json"
     />
-    <script type="module" crossorigin src="/assets/index-Bo4DLBM9.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BFrhW3c8.css">
+    <script type="module" crossorigin src="/assets/index-BdPFjQEC.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CI57DNUV.css">
   </head>
   <body>
     <noscript
@@ -115,10 +115,6 @@
               <p id="movie-tagline"></p>
               <p id="movie-plot"></p>
             </div>
-            <p class="finish-time">
-              <span class="clock-icon" aria-hidden="true"></span
-              ><time id="ends-at"></time>
-            </p>
           </section>
           <section class="movie-library" aria-labelledby="shelf-title">
             <h2 id="shelf-title">Family Movies</h2>
@@ -126,13 +122,24 @@
             <p id="browse-status" role="status" aria-live="polite"></p>
           </section>
         </div>
-        <img
+        <!-- Pointer-only Easter egg; keyboard and remote focus stay on movies. -->
+        <button
+          id="studio-fullscreen"
           class="studio-icon"
-          src="/assets/icon-512x512.png"
-          alt="Lakota Loop"
-          width="120"
-          height="120"
-        />
+          type="button"
+          tabindex="-1"
+          aria-label="Lakota Loop: toggle browsing fullscreen"
+          aria-pressed="false"
+          aria-busy="false"
+        >
+          <img
+            src="/assets/icon-512x512.png"
+            alt=""
+            width="120"
+            height="120"
+            draggable="false"
+          />
+        </button>
       </section>
       <section id="player-screen" aria-label="Movie playback" hidden>
         <!-- Reveal the surface before enabling native controls in VideoPlayer. -->
